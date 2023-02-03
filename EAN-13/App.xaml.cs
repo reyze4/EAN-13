@@ -14,6 +14,6 @@ namespace EAN_13
     /// </summary>
     public partial class App : Application
     {
-        
+        static public EANDERBENEV DB = new EANDERBENEV();
     }
 }

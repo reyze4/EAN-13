@@ -27,9 +27,12 @@ namespace EAN_13
 
         public MainWindow()
         {
+            
             InitializeComponent();
+            cBox.ItemsSource = App.DB.Barcode.ToList();
             FillDict();
             Load("0000000000000");
+
         }
 
         private Rectangle copyRec(Rectangle Rec)

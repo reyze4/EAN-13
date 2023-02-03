@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EAN_13"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="500" Width="800"
     WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <StackPanel Background="White">
@@ -36,6 +36,8 @@
                       SelectedItem="{Binding Barcode}">
                       
             </ComboBox>
+            
+            <
             <Border Height="252" Width="349" BorderBrush="Black" BorderThickness="1">
                 <InkCanvas x:Name="barcodeCan" Height="250" Width="347"
                            Background="White" EditingMode="GestureOnly"
