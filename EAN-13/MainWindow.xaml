@@ -37,7 +37,7 @@
                       
             </ComboBox>
             
-            <
+            
             <Border Height="252" Width="349" BorderBrush="Black" BorderThickness="1">
                 <InkCanvas x:Name="barcodeCan" Height="250" Width="347"
                            Background="White" EditingMode="GestureOnly"
