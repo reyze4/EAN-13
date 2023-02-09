@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using EAN_13.Model;
+
 
 namespace EAN_13
 {
@@ -291,6 +293,33 @@ namespace EAN_13
             {
             }
 
+        }
+
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+            char[] Massiv = cBox.Text.ToCharArray();
+
+            int Even = 0;
+            int Odd = 0;
+            int Buffer = 0;
+
+            for(int i = 0; i <txtBox.Text.Length -1; i+=2)
+            {
+                Even += (int)Char.GetNumericValue(Massiv[i + 1]);
+                Odd += (int)Char.GetNumericValue(Massiv[i]);
+            }
+
+            Buffer = 10 - ((Even * 3 + Odd) % 10);
+            if (Buffer == (int)Char.GetNumericValue(Massiv.Last()))
+                MessageBox.Show($"Код правильный", "Ответ", MessageBoxButton.OK);
+            else
+                MessageBox.Show($"Код неправильный", "Ответ", MessageBoxButton.OK);
+
+        }
+
+        private void cBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            txtBox.Text = (cBox.SelectedItem as Barcode).Number;
         }
     }
 }

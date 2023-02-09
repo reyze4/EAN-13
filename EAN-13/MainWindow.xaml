@@ -23,7 +23,7 @@
                      Background="LightBlue" TextWrapping="Wrap"
                      VerticalAlignment="Top" Width="300"
                      HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                     Height="40" Margin="0 20 0 30" FontSize="15" FontWeight="DemiBold"
+                     Height="40" Margin="0 20 0 5" FontSize="15" FontWeight="DemiBold"
                      SpellCheck.IsEnabled="True"  TextChanged="txtBox_TextChanged" MaxLength="13"
             />
 
@@ -33,9 +33,21 @@
                       HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                       Height="40" Margin="0 5 0 5" FontSize="15" FontWeight="DemiBold"
                       DisplayMemberPath="Number"
-                      SelectedItem="{Binding Barcode}">
+                      SelectedItem="{Binding Barcode}"
+                      SelectionChanged="cBox_SelectionChanged">
                       
             </ComboBox>
+
+            <Button x:Name="btn"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top" Width="300"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    Height="40" Margin="0 5 0 5" FontSize="15" FontWeight="DemiBold"
+                    Content="Проверить"
+                    Click="btn_Click"
+                     >
+                
+            </Button>
             
             
             <Border Height="252" Width="349" BorderBrush="Black" BorderThickness="1">
